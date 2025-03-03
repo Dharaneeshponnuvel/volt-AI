@@ -1,0 +1,132 @@
+/* Full-screen layout */
+.login-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+/* Left side - Background Image */
+.image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../../image/backgroundImage.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Right side - Login Box */
+.login-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Login title */
+.login-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ffb400;
+    color: black;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Register Link */
+p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+p a {
+    color: #ffb400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .login-box {
+        width: 90%;
+        max-width: 350px;
+        padding: 30px;
+    }
+}
